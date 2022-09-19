@@ -1,0 +1,54 @@
+class Animal:
+    def __init__(self):
+        pass
+    
+    def __str__(self):
+        return "Animal"
+
+class Menu:
+    my_object = None
+    MAIN_MENU_TEXT = """
+'-------------------------'
+'------- Main Menu -------'
+'-------------------------'
+
+1: 'Create object',
+2: 'Print Object',
+3: 'Delete Object'
+"""
+
+    def menu_loop(self):
+        self.running = True
+        while self.running:
+            print(Menu.MAIN_MENU_TEXT)
+            choice = self.user_input()
+            self.menu_choice(choice)
+        
+    def menu_choice(self, choice):
+        if choice == 1:
+            self.my_object = create_object()
+            print("Created Object")
+        
+        elif choice == 2:
+            if not self.my_object:
+                print("There is no object to print")
+            else:
+                print(self.my_object)
+        
+        elif choice == 3:
+            if self.my_object:
+                del(self.my_object)
+                print("Deleted")
+            else: 
+                print("There is no object to delete")
+            
+        
+    def user_input(self):
+        return int(input("Enter your choice [1-3]: "))
+
+def create_object():
+    dog = Animal()
+    return dog
+
+if __name__ == '__main__':
+    Menu().menu_loop()

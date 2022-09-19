@@ -1,0 +1,10 @@
+class Car():
+    def open_hood():
+        print("Nice engine")
+
+class Electric(Car):
+    def open_hood():
+        print("Where is the engine?")
+    
+Car.open_hood()
+Electric.open_hood()

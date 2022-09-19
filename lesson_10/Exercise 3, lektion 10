@@ -1,0 +1,3 @@
+class person:
+    def address(self):
+        self.street_name = ("")
