@@ -1,0 +1,28 @@
+
+
+class Animal:
+    def __init__(self, speed):
+        self.speed = speed
+    pass
+
+class Dog(Animal):
+    def __init__(self, bark, race):
+        self.sound = bark
+        self.race = race
+    pass
+
+class supermarket:
+    def __init__(self, location, size, revenue):
+        location = "Stockholm "
+        size = (4095,"m2")
+        revenue = ("$",400000)
+        self.location = location
+        self.size = size
+        self.revenue = revenue
+    print(__init__)
+    pass
+(supermarket)
+
+class coop(supermarket):
+    pass
+

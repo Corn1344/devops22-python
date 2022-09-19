@@ -1,0 +1,26 @@
+from cgitb import grey
+from math import pi
+from multiprocessing.heap import Arena
+class Circle:
+    def __init__(self, diagonal):
+        self.diagonal = diagonal
+        self.colour = "grey"
+        self.area = self.calc_area()
+        self.circumference = self.calc_circumference()
+    def calc_area(self):
+        return pi * (self.diagonal / 2) ** 2
+    def calc_circumference(self):
+        return pi * self.diagonal
+    def set_colour(self, colour):
+        self.colour = colour
+def main():
+    circle = Circle(4)
+    print(circle.area)
+    print(circle.circumference)
+    print(circle.colour)
+    circle.set_colour("red")
+    print(circle.colour)
+if __name__ == "__main__":
+    main()
+
+    

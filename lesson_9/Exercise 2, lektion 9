@@ -1,0 +1,19 @@
+class square:
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return float(self.side ** 2)
+
+    def circumference(self):
+        return float(self.side * 4)
+    
+def main():
+    square_one = square(2)
+    print(square_one.area())
+    print(square_one.circumference())
+
+    square_two = square(3.5)
+    print(square_two.area())
+    print(square_two.circumference())
+
