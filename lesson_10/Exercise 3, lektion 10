@@ -1,3 +1,40 @@
-class person:
-    def address(self):
-        self.street_name = ("")
+"""class Person:
+    def __init__(self, street_name, street_number, postalcode, country):
+        self.street_name = street_name
+        self.street_number = street_number
+        self.postalcode = postalcode
+        self.country = country
+
+class Employee(Person):
+    def __init__(self, street_name, street_number, postalcode, country, emp_number, salary):
+        super().__init__(street_name, street_number, postalcode, country)
+        self.emp_number = emp_number
+        self.salary = salary
+    def __str__(self):
+        return (f'Employee {int(self.emp_number)}, lives on {str(self.street_name)} {int(self.street_number)} and has a salary of {int(self.salary)}kr')
+## >>            Address, nummer, postnummer, land, anställnings-id, lön.
+emp = Employee ("Sveavägen", 4, 11682,"Sverige",1,10000)
+print(emp)"""
+
+
+
+class Address:
+    def __init__(self, street_name, postal_code, country):
+        self.street_name = street_name
+        self.postal_code = postal_code
+        self.country = country
+
+
+class Employee:
+    def __init__(self, address, emp_number, salary):
+        self.address = address
+        self.emp_number = emp_number
+        self.salary = salary
+
+    def __str__(self):
+        return f"emp {self.emp_number} live on {self.address.street_name}"
+
+
+address = Address("Sveavägen", "11350", "Sweden")
+emp = Employee(address, 1, 10000)
+print(emp)
